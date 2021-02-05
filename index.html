@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/initial.css">          <!--pour les parametres comuns-->  
+    <link rel="stylesheet" href="css/all.css">              <!--pour font awsome-->
+    <link rel="stylesheet" href="css/nuit.css" id="changeColor">           <!--change mode -->
+    <link rel="stylesheet" href="css/styleLarge.css">   <!--pour ecran plus de 1000px -->            
+    <link rel="stylesheet" href="css/styleTo1036.css">   <!--pour ecran plus de 1000px -->            
+    <link rel="stylesheet" href="css/styleTo700.css">   <!--pour ecran plus de 1000px -->            
+    <link rel="stylesheet" href="css/styleTo300.css">   <!--pour ecran plus de 1000px -->            
+    <title>Portfolio</title>
+</head>
+<body>
+
+    <!-- mouse -->
+    <div id="mouse">
+        <i class="fas fa-location-arrow"></i>
+    </div>
+
+<!-- section All -->
+<section class="all">
+    <div class="mode" onmousemove="chMouseColor()" onmouseout="chMouseColorNone()">
+        <div class="nuit activePage" onclick="changerMode('jour')"><i class="fas fa-moon"></i></div>
+        <div class="jour" onclick="changerMode('nuit')"><i class="fas fa-sun"></i></div>
+        
+    </div>
+    <!-- Navigator -->
+    <div class="nav" >
+        <!-- home -->
+        <div class="linkNav "  id="home" onclick="allezApage('home'), colorIconeMenu('home'),afficheLogoInfos()" >
+            <i class="fas fa-home iconActive"></i>
+            <span>Home</span>
+        </div>
+
+        <!-- about me -->
+        <div class="linkNav"  id="about" onclick="allezApage('about'), colorIconeMenu('about'),masqueLogoInfos()">
+            <i class="fas fa-user-alt"></i>
+            <span>about me</span>
+        </div>
+        
+        <!-- resume -->
+        <div class="linkNav"  id="resume" onclick="allezApage('resume'), colorIconeMenu('resume'),masqueLogoInfos()">
+            <i class="fas fa-graduation-cap"></i>
+            <span>resume</span>
+        </div>
+        <!-- portfolio -->
+        <div class="linkNav"  id="portfolio" onclick="allezApage('portfolio'), colorIconeMenu('portfolio'),masqueLogoInfos()">
+            <i class="fas fa-briefcase"></i>
+            <span>portfolio</span>
+        </div>
+        <!-- blog -->
+        <div class="linkNav"  id="blog" onclick="allezApage('blog'), colorIconeMenu('blog'),masqueLogoInfos()">
+            <i class="fas fa-book"></i>
+            <span>blog</span>
+        </div>
+        <!-- contact -->
+        <div class="linkNav"  id="contact" onclick="allezApage('contact'), colorIconeMenu('contact'),masqueLogoInfos()">
+            <i class="fas fa-envelope"></i>
+            <span>contact</span>
+        </div>
+        
+    </div>
+
+    <!-- informatios -->
+    <div class="logoInfos affichelogoInfos">
+        
+        <div class="imgInfo"><img src="images/main_photo.jpg" alt="main image"></div>
+        <div class="nameInfos">Alex Smith</div>
+        <div class="fonctionInfos">Web Designer</div>
+        <div class="media">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <div class="donloawdCv"><a href="cv/cv.pdf"> <span>Download CV</span></a></div>
+        <div class="copyright">&copy; 2020 All rights reserved.</div>
+        
+
+
+    </div>
+
+    <!-- contenu -->
+    <div class="content">
+        <!-- btns -->
+        <div class="btns">
+            <div class="btnsBox">
+                <i class="fas fa-chevron-right" onclick="nextPage()"></i>
+                <i class="fas fa-chevron-left" onclick="previousPage()"></i>
+            </div>
+        </div>
+        
+        <!-- page home -->
+        <div class="home comd activePage">
+            <div class="nameHome">Alex Smith</div>
+            <div class="fonctionHome">Web Designer</div> 
+        </div>
+
+        <!-- page About -->
+        <div class="about comd">
+                <div class="aboutBox">
+                   <div class="title">About <span>Me</span></div> 
+                   <div class="part1">
+                       <p>Proin volutpat mauris ac pellentesque pharetra. Suspendisse congue elit vel odio suscipit, sit amet tempor nisl imperdiet. Quisque ex justo, faucibus ut mi in, condimentum finibus dolor. Aliquam vitae hendrerit dolor, eget imperdiet mauris. Maecenas et ante id ipsum condimentum dictum et vel massa. Ut in imperdiet dolor, vel consectetur dui.</p>
+                       <div class="myInfos">
+                           <div>Age 32 <span>36</span></div>
+                           <div>Residence  <span>USA</span></div>
+                           <div>Address  <span>88 Some Street, Some Town</span></div>
+                           <div>e-mail <span>email@example.com</span></div>
+                           <div>Phone  <span>+0123 123 456 789</span></div>
+                       </div>
+                   </div>
+                   <div class="subTitle">What <span>I Do</span></div> 
+
+                   <div class="part2">
+                    <div class="subPart2">
+                        <div><i class="fas fa-store"></i></div>
+                        <div class="titrePart2">Ecommerce</div>
+                        <p>Pellentesque pellentesque, ipsum sit amet auctor accumsan, odio tortor bibendum massa, sit amet ultricies ex lectus scelerisque nibh. Ut non sodales.</p>
+                    </div>
+
+                    <div class="subPart2 subPart2R">
+                        <div><i class="fas fa-pen"></i></div>
+                        <div class="titrePart2">Copywriting</div>
+                        <p>Pellentesque pellentesque, ipsum sit amet auctor accumsan, odio tortor bibendum massa, sit amet ultricies ex lectus scelerisque nibh. Ut non sodales.</p>
+                    </div>
+
+                    <div class="subPart2">
+                        <div><i class="fas fa-laptop"></i></div>
+                        <div class="titrePart2">Web Design</div>
+                        <p>Pellentesque pellentesque, ipsum sit amet auctor accumsan, odio tortor bibendum massa, sit amet ultricies ex lectus scelerisque nibh. Ut non sodales.</p>
+                    </div>
+
+                    <div class="subPart2 subPart2R">
+                        <div><i class="fas fa-flag"></i></div>
+                        <div class="titrePart2">Management</div>
+                        <p>Pellentesque pellentesque, ipsum sit amet auctor accumsan, odio tortor bibendum massa, sit amet ultricies ex lectus scelerisque nibh. Ut non sodales.</p>
+                    </div>
+                </div>
+
+                </div>
+        </div>
+
+        <!-- page resume -->
+        <div class="resume comd">
+            <div class="resumeBox">
+                <div class="title">Resume <span> .</span></div>
+                <div class="divisiovs">
+                    <div class="education">
+                        <div class="subTitle"><span>-</span> Education</div>
+                        <div class="educationLeft">
+                            <span class="dte">2008</span>
+                            <span class="lieu">University of Studies</span>
+                        </div>
+                        <div class="educationRight">
+                            <span class="articleTitle">Frontend Development</span>
+                            <p>Maecenas finibus nec sem ut imperdiet. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis ante.</p>
+                        </div>
+
+                        <div class="educationLeft">
+                            <span class="dte">2007</span>
+                            <span class="lieu">University of Studies</span>
+                        </div>
+                        <div class="educationRight">
+                            <span class="articleTitle">Graphic Design</span>
+                            <p>Aliquam tincidunt malesuada tortor vitae iaculis. In eu turpis iaculis, feugiat risus quis, aliquet urna. Quisque fringilla mollis risus, eu pulvinar dolor.</p>
+                        </div>
+                        
+                        
+                        <div class="subTitle"><span>-</span> Experience</div>
+                        <div class="educationLeft">
+                            <span class="dte">2016 - Current</span>
+                            <span class="lieu">Google</span>
+                        </div>
+                        <div class="educationRight">
+                            <span class="articleTitle">Lead Ui/Ux Designer</span>
+                            <p>Praesent dignissim sollicitudin justo, sed elementum quam lacinia quis. Phasellus eleifend tristique posuere. Sed vitae dui nec magna.</p>
+                        </div>
+
+                        <div class="educationLeft">
+                            <span class="dte">2013 - 2016</span>
+                            <span class="lieu">Adobe</span>
+                        </div>
+                        <div class="educationRight">
+                            <span class="articleTitle">Senior Ui/Ux Designer</span>
+                            <p>Maecenas tempus faucibus rutrum. Duis eu aliquam urna. Proin vitae nulla tristique, ornare felis id, congue libero. Nam volutpat euismod quam.</p>
+                        </div>
+
+                        <div class="educationLeft">
+                            <span class="dte">2011 - 2013</span>
+                            <span class="lieu">Google</span>
+                        </div>
+                        <div class="educationRight">
+                            <span class="articleTitle">Junior Ui/Ux Designer</span>
+                            <p>Duis mollis nunc quis quam viverra venenatis. Nulla nulla arcu, congue vitae nunc ac, sodales ultricies diam. Nullam justo leo, tincidunt sit amet.</p>
+                        </div>
+                    </div>
+
+                    
+                    <!-- skils -->
+                    <div class="skils">
+                        <!-- design skils -->
+                        <div class="subTitle"><span>-</span> Design <span> Skills</span></div>
+                        <div class="skil">
+                            <h2>Web Design</h2>
+                            <div class="progressBox">
+                                <div class="progress"></div>
+                            </div>
+                            <h3>95%</h3>
+                        </div>
+                        <div class="skil">
+                            <h2>Print Design</h2>
+                            <div class="progressBox">
+                                <div class="progress"></div>
+                            </div>
+                            <h3>65%</h3>
+                        </div>
+                        <div class="skil">
+                            <h2>Logo Design</h2>
+                            <div class="progressBox">
+                                <div class="progress"></div>
+                            </div>
+                            <h3>80%</h3>
+                        </div>
+                        <div class="skil">
+                            <h2>Graphic Design</h2>
+                            <div class="progressBox">
+                                <div class="progress"></div>
+                            </div>
+                            <h3>90%</h3>
+                        </div>
+
+                        <!-- design skils -->
+                        <div class="subTitle"><span>-</span> Coding <span> Skills</span></div>
+                        <div class="skil">
+                            <h2>JavaScript</h2>
+                            <div class="progressBox">
+                                <div class="progress"></div>
+                            </div>
+                            <h3>95%</h3>
+                        </div>
+                        <div class="skil">
+                            <h2>PHP</h2>
+                            <div class="progressBox">
+                                <div class="progress"></div>
+                            </div>
+                            <h3>85%</h3>
+                        </div>
+                        <div class="skil">
+                            <h2>HTML/CSS</h2>
+                            <div class="progressBox">
+                                <div class="progress"></div>
+                            </div>
+                            <h3>100%</h3>
+                        </div>
+                        <div class="skil">
+                            <h2>Smarty/Twig</h2>
+                            <div class="progressBox">
+                                <div class="progress"></div>
+                            </div>
+                            <h3>90%</h3>
+                        </div>
+                        <div class="skil">
+                            <h2>Perl</h2>
+                            <div class="progressBox">
+                                <div class="progress"></div>
+                            </div>
+                            <h3>90%</h3>
+                        </div>
+
+                        <!-- Knowledges -->
+                        <div class="subTitle"><span>-</span> Knowledges</div>
+                        <div class="Knowledges">
+                            <span>Marketing</span>
+                            <span>Print</span>
+                            <span>Digital Design</span>
+                            <span>Social Media</span>
+                            <span>Time Management</span>
+                            <span>Communication</span>
+                        </div>
+                    </div>
+
+
+
+
+
+            
+
+
+
+                </div>
+
+            </div>
+        
+        
+        </div>
+        <!-- page portfolio -->
+        <div class="portfolio comd">
+            <div class="portfolioBox">
+                <div class="title">Portfolio <span>.</span></div> 
+                <div class="portfolioLinks">
+                    <div class="linkP iconActive" id="all" onclick="changeColLinkP('all'), afficheimages('img')">All</div>
+                    <div class="linkP" id="Detailed"  onclick="changeColLinkP('Detailed'), afficheimages('img2')">Detailed</div>
+                    <div class="linkP" id="Mockups"  onclick="changeColLinkP('Mockups'), afficheimages('img1')">Mockups</div>
+                    <div class="linkP" id="SoundCloud"  onclick="changeColLinkP('SoundCloud'), afficheimages('img4')">SoundCloud</div>
+                    <div class="linkP" id="Vimeo"  onclick="changeColLinkP('Vimeo'), afficheimages('img5')">Vimeo Videos</div>
+                    <div class="linkP" id="YouTube"  onclick="changeColLinkP('YouTube'), afficheimages('img3')">YouTube Videos</div>
+                </div>
+                <div class="imgBox">
+                    <div class="img img2">
+                        <img src="images/portfolio1.JPG" alt="">
+                        <h2>SoundCloud Audio</h2>
+                    </div>
+                    <div class="img img1">
+                        <img src="images/portfolio2.JPG" alt="">
+                        <h2>Detailed Project 2</h2>
+                    </div>
+                    <div class="img img2">
+                        <img src="images/portfolio3.JPG" alt="">
+                        <h2>Vimeo Video 1</h2>
+                    </div>
+                    <div class="img img3">
+                        <img src="images/portfolio4.JPG" alt="">
+                        <h2>Detailed Project 1</h2>
+                    </div>
+                    <div class="img img5">
+                        <img src="images/portfolio5.JPG" alt="">
+                        <h2>Mockup Design 1</h2>
+                    </div>
+                    <div class="img img4">
+                        <img src="images/portfolio6.JPG" alt="">
+                        <h2>YouTube Video 1</h2>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+
+        </div>
+       
+        <!-- page blog -->
+        <div class="blog comd">
+            <div class="blogBox">
+                <div class="title">Blog <span>.</span></div>
+                <div class="blogBoxImg">
+                    <div class="boxblgimg"><img src="images/blog1.jpg" alt="blog1"></div>
+                    <div class="dateblog">05 Mar 2020</div>
+                    <h2>Why I Switched to Sketch For UI Design</h2>
+                    <span>Design</span>
+                </div>
+                <div class="blogBoxImg">
+                    <div class="boxblgimg"><img src="images/blog2.jpg" alt="blog1"></div>
+                    <div class="dateblog">23 feb 2020</div>
+                    <h2>Best Practices for Animated Progress Indicators</h2>
+                    <span>UI</span>
+                </div>
+                <div class="blogBoxImg">
+                    <div class="boxblgimg"><img src="images/blog3.jpg" alt="blog1"></div>
+                    <div class="dateblog">06 feb 2020</div>
+                    <h2>Designing the Perfect Feature Comparison Table</h2>
+                    <span>Design</span>
+                </div>
+                <div class="blogBoxImg">
+                    <div class="boxblgimg"><img src="images/blog4.jpg" alt="blog1"></div>
+                    <div class="dateblog">07 jan 2020</div>
+                    <h2>An Overview of E-Commerce Platforms</h2>
+                    <span>UI</span>
+                </div>
+                
+
+
+
+
+            </div>
+            
+            
+
+
+
+
+
+
+
+
+        </div>
+               
+        <!-- page contact -->
+        <div class="contact comd">
+            
+            <div class="contactBox">
+                <div class="title">Contact <span>.</span></div>
+                <div class="contactInfoBox">
+                    <div class="contactInfo">
+                        <div class="iconContact"><i class="fas fa-map-marker"></i></div>
+                        <div class="nameContact">san fransisco</div>
+                    </div>
+
+                    <div class="contactInfo">
+                        <div class="iconContact"><i class="fas fa-phone"></i></div>
+                        <div class="nameContact">415-832-2000</div>
+                    </div>
+
+                    <div class="contactInfo">
+                        <div class="iconContact"><i class="fas fa-envelope"></i></div>
+                        <div class="nameContact">alex@example.com</div>
+                    </div>
+
+                    <div class="contactInfo">
+                        <div class="iconContact"><i class="fa fa-check-circle"></i></div>
+                        <div class="nameContact">Freelance Available</div>
+                    </div>
+                </div>
+
+                <div class="contactMessage">
+                    <div class="contactImg">
+                        <img src="images/Contact.gif" alt="contact">
+                    </div>
+                    <div class="contactMessageLeft">
+                        <input type="text" placeholder="Full Name">
+                        <input type="text" placeholder="Email Adress">
+                        <input type="text" placeholder="Subject">
+                    </div>
+                    <textarea name="txt" id="txterea"></textarea>
+                    <button>Send</button>
+                </div>
+
+            </div>
+
+        </div>
+        
+    </div>
+
+</section>
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
