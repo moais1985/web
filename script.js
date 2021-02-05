@@ -212,7 +212,7 @@ function hideHost(){
 // document.addEventListener('load', setTimeout(hideHost, 100));
 
 
-document.addEventListener('load', setTimeout(hideHost, 100));
+//document.addEventListener('load', setTimeout(hideHost, 100));
 
 
 
